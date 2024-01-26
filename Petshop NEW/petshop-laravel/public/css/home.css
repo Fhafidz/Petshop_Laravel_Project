@@ -1,0 +1,128 @@
+/* CSS utama */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Memastikan setidaknya seluruh viewport terisi */
+}
+
+.main {
+    flex: 1; /* Menggunakan ruang tersedia untuk konten utama */
+    text-align: left;
+    padding: 10px;
+    display: inline-block;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    position: relative;
+}
+
+.main .text h1 {
+    text-align: center;
+    font-size: 60px; /* Menambah ukuran teks h1 menjadi 60px */
+    color: black;
+    font-weight: bold;
+}
+
+.main .text p {
+    text-align: center;
+    font-size: 20px; /* Menambah ukuran teks paragraf menjadi 24px */
+    color: #000000;
+}
+
+.additional-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.additional-content .additional-images img {
+    max-width: 300px; /* Memperbesar maksimum lebar gambar menjadi 300px */
+    max-height: 300px; /* Memperbesar maksimum tinggi gambar menjadi 300px */
+}
+
+.additional-content .additional-text {
+    max-width: calc(100% - 300px); /* Lebar teks */
+}
+
+.additional-content .additional-text p {
+    text-align: justify;
+    padding-left: 30px;
+    font-size: 22px; /* Menambah ukuran teks paragraf di additional-content menjadi 22px */
+    color: #000000;
+}
+
+
+/* Perubahan untuk konten 1 */
+.content1 .additional-images {
+    order: 1; /* Mengatur urutan konten gambar */
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+}
+
+.content1 .additional-text {
+    order: 2; /* Mengatur urutan konten teks */
+    text-align: left; /* Posisi teks di sebelah kanan */
+}
+
+/* Perubahan untuk konten 2 */
+.content2 .additional-images {
+    order: 1; /* Mengubah urutan konten gambar */
+}
+
+/* Perubahan untuk konten 3 */
+.content3 .additional-images {
+    order: 1; /* Mengatur urutan konten gambar */
+    margin-right: 20px; /* Jarak antara gambar dan teks */
+}
+
+.content3 .additional-text {
+    order: 2; /* Mengatur urutan konten teks */
+    text-align: left; /* Posisi teks di sebelah kanan */
+}
+
+/* Style untuk footer */
+.footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsif untuk layar yang lebih kecil */
+@media (max-width: 768px) {
+    .main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .additional-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .additional-content .additional-text {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .additional-content .additional-images img {
+        max-width: 100%;
+        max-height: auto;
+    }
+}
+
+/* Contoh penambahan properti transition */
+.main .text h1,
+.main .text p,
+.additional-content .additional-text p,
+.additional-content .additional-images img {
+    transition: all 10ms ease-in; /* Transisi semua perubahan dengan durasi 0.3 detik dan efek 'ease' */
+}
